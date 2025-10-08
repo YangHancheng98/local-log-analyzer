@@ -1,0 +1,33 @@
+# - keyword: "PowerManagerService:"
+#   color: "purple"
+#   instruction: "电池管理服务日志！！"
+
+# - keyword: "WARN"
+#   color: "yellow"
+#   instruction: "警告，注意！"
+
+# - keyword: 'notifyUiVisibilityChanged:vis=0x[0-9A-Fa-f]+, SystemUiVisibility=0x[0-9A-Fa-f]+'
+#   color: "cyan"
+#   regex: true
+#   instruction: "UI 可视化状态变化"
+
+- keyword: 'WARN.*'
+  color: "yellow"
+  regex: true
+  instruction: "警告信息"
+
+# - keyword: 'ERROR|Failed'
+#   color: "red"
+#   regex: true
+#   instruction: "错误信息"
+
+# - keyword: '0x[0-9A-Fa-f]{8,}'
+#   color: "purple"
+#   regex: true
+#   instruction: "十六进制地址"
+
+- keyword: 'session_id\s*=\s*\d+'
+  color: "green"
+  regex: true
+  instruction: "会话ID信息"
+
